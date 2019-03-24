@@ -99,6 +99,16 @@ section .wrapper {
                 width: 200px;
             }
 
+            section .wrapper article .memeSelector input {
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        section .wrapper article .memeText {
+            margin-top:10px;
+        }
+
 section .generatedMeme {
     position: relative;
     text-align: center;
