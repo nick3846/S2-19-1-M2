@@ -1,0 +1,60 @@
+﻿@page
+@model S2.AspNet.Repetition.Pages.IndexModel
+@{
+    ViewData["Title"] = "Forside";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Min første memegenerator</h1>
+<div class="wrapper">
+    <article>
+        <form action="/" method="get">
+            <div class="memeWrapper">
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="1" checked />
+                </div>
+
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="2" />
+                </div>
+
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="3" />
+                </div>
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="4" />
+                </div>
+
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="5" />
+                </div>
+
+                <div class="memeSelector">
+                    <img src="~/Img/meme1.png" />
+                    <input type="radio" name="imageselected" value="6" />
+                </div>
+            </div>
+            <div class="memeSelector">
+                <input type="text" size="50" name="memeText"  placeholder="Skriv din meme text"/>
+                <input type="submit" value="Generer meme" />
+            </div>
+        </form>
+    </article>
+</div>
+@if (Model.MemeText != "")
+{
+    <div class="generatedMeme">
+        <img src="@Model.SelectedImageUrl" />
+        <div class="bottom-center">
+            @Model.MemeText
+        </div>
+    </div>
+}
+
+
+
