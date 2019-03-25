@@ -98,7 +98,6 @@ section .wrapper {
         }
 
             section .wrapper article .memeSelector img {
-                /*width: 200px;*/
                 height: 300px;
             }
 
@@ -109,7 +108,7 @@ section .wrapper {
 
             section .wrapper article .memeSelector >div{
                 margin: auto;
-                width: 200px;
+                width: 260px;
                 padding-bottom: 20px;
             }
 
@@ -127,6 +126,9 @@ section .generatedMeme {
 section .generatedMeme img{
     width: 100%;
 }
+    section .generatedMeme >div.small{font-size: 1rem}
+    section .generatedMeme >div.medium{font-size: 3rem}
+    section .generatedMeme >div.big {font-size: 5rem}
 
     /* Bottom left text */
     section .generatedMeme .bottom-left {

@@ -65,6 +65,11 @@
                             <option value="red">Rød</option>
                             <option value="pink">Pink</option>
                         </select>
+                        <select name="fontsize">
+                            <option value="small">Lille</option>
+                            <option selected="selected" value="medium">Mellem</option>
+                            <option value="big">Stor</option>
+                        </select>
                     </div>
                 <input type="submit" value="Generer meme" />
             </div>
@@ -75,7 +80,7 @@
 {
     <div class="generatedMeme">
         <img src="@Model.SelectedImageUrl" />
-        <div class="@Model.Position" style=" color: @Model.Color">
+        <div class="@Model.Position @Model.FontSize" style=" color: @Model.Color">
             @Model.MemeText
         </div>
     </div>
