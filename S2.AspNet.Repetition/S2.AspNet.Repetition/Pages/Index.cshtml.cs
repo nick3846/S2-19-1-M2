@@ -14,9 +14,11 @@ namespace S2.AspNet.Repetition.Pages
         [BindProperty(SupportsGet = true)]
         public string MemeText { get; set; } = "";
         public string SelectedImageUrl { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string Position { get; set; }
         public void OnGet()
         {
-            SelectedImageUrl = "/img/meme1.png";
+            SelectedImageUrl = $"/img/meme{ImageSelected}.jpg";
             
         }
     }
