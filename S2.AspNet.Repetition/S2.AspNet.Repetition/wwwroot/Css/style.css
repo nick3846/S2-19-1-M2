@@ -83,6 +83,7 @@ section .wrapper {
 
     section .wrapper article {
         padding: 2%;
+        width: 96%;
     }
 
         section .wrapper article .memeWrapper {
@@ -93,10 +94,12 @@ section .wrapper {
 
         section .wrapper article .memeSelector {
             padding: 5px;
+            padding-bottom: 20px;
         }
 
             section .wrapper article .memeSelector img {
-                width: 200px;
+                /*width: 200px;*/
+                height: 300px;
             }
 
             section .wrapper article .memeSelector input {
