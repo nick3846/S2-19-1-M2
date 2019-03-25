@@ -1,0 +1,20 @@
+﻿@page
+@model S2.AspNet.Repetition.Pages.NewMemeModel
+@{
+    ViewData["Title"] = "NewMeme";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>NewMeme</h2>
+
+@if (Model.MemeText != "")
+{
+    <div class="generatedMeme">
+        <img src="@Model.SelectedImageUrl" />
+        <div class="@Model.Position @Model.FontSize" style=" color: @Model.Color">
+            @Model.MemeText
+        </div>
+    </div>
+}
+
+<h4><a href="index">Gå tilbage til forsiden</a></h4>

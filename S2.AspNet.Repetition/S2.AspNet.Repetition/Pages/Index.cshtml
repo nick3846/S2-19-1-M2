@@ -8,7 +8,7 @@
 <h1>Min første memegenerator</h1>
 <div class="wrapper">
     <article>
-        <form action="/" method="get">
+        <form action="NewMeme" method="get">
             <div class="memeWrapper">
                 <div class="memeSelector">
                     <img src="~/Img/meme1.jpg" />
@@ -76,15 +76,3 @@
         </form>
     </article>
 </div>
-@if (Model.MemeText != "")
-{
-    <div class="generatedMeme">
-        <img src="@Model.SelectedImageUrl" />
-        <div class="@Model.Position @Model.FontSize" style=" color: @Model.Color">
-            @Model.MemeText
-        </div>
-    </div>
-}
-
-
-

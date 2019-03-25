@@ -9,21 +9,6 @@ namespace S2.AspNet.Repetition.Pages
 {
     public class IndexModel : PageModel
     {
-        [BindProperty(SupportsGet = true)]
-        public int ImageSelected { get; set; }
-        [BindProperty(SupportsGet = true)]
-        public string MemeText { get; set; } = "";
-        public string SelectedImageUrl { get; set; }
-        [BindProperty(SupportsGet = true)]
-        public string Position { get; set; }
-        [BindProperty(SupportsGet = true)]
-        public string Color { get; set; }
-        [BindProperty(SupportsGet = true)]
-        public string FontSize { get; set; }
-        public void OnGet()
-        {
-            SelectedImageUrl = $"/img/meme{ImageSelected}.jpg";
-            
-        }
+        
     }
 }
