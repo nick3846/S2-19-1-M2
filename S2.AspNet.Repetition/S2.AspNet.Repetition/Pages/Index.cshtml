@@ -47,15 +47,25 @@
             </div>
             <div class="memeSelector memeText">
                 <input type="text" size="50" name="memeText"  placeholder="Skriv din meme text"/><br />
-                <select name="position">
-                    <option value="top-left">Top left</option>
-                    <option value="top-center">Top center</option>
-                    <option value="top-right">Top right</option>
-                    <option value="centered">centered</option>
-                    <option value="bottom-left">Bottom left</option>
-                    <option value="bottom-center">Bottom Center</option>
-                    <option value="bottom-right">Bottom right</option>
-                </select>
+                    <div>
+                        <select name="position">
+                            <option value="top-left">Top left</option>
+                            <option value="top-center">Top center</option>
+                            <option value="top-right">Top right</option>
+                            <option value="centered">centered</option>
+                            <option value="bottom-left">Bottom left</option>
+                            <option value="bottom-center">Bottom Center</option>
+                            <option value="bottom-right">Bottom right</option>
+                        </select>
+                        <select name="color">
+                            <option value="white">Hvid</option>
+                            <option value="black">Sort</option>
+                            <option value="orange">Orange</option>
+                            <option value="green">Grøn</option>
+                            <option value="red">Rød</option>
+                            <option value="pink">Pink</option>
+                        </select>
+                    </div>
                 <input type="submit" value="Generer meme" />
             </div>
         </form>
@@ -65,7 +75,7 @@
 {
     <div class="generatedMeme">
         <img src="@Model.SelectedImageUrl" />
-        <div class="@Model.Position">
+        <div class="@Model.Position" style=" color: @Model.Color">
             @Model.MemeText
         </div>
     </div>

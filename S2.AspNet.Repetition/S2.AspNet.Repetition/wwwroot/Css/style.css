@@ -104,8 +104,13 @@ section .wrapper {
 
             section .wrapper article .memeSelector input {
                 display:block;
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
+            }
+
+            section .wrapper article .memeSelector >div{
+                margin: auto;
+                width: 200px;
+                padding-bottom: 20px;
             }
 
         section .wrapper article .memeText {
