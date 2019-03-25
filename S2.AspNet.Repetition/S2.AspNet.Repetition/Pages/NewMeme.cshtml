@@ -1,11 +1,11 @@
 ﻿@page
 @model S2.AspNet.Repetition.Pages.NewMemeModel
 @{
-    ViewData["Title"] = "NewMeme";
+    ViewData["Title"] = Model.MemeTitle;
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h2>NewMeme</h2>
+<h2>@Model.MemeTitle</h2>
 
 @if (Model.MemeText != "")
 {
