@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using S2.AspNet.Repetition.DAL;
+using S2.AspNet.Repetition.Entities;
 
 namespace S2.AspNet.Repetition.Pages
 {
@@ -31,7 +33,22 @@ namespace S2.AspNet.Repetition.Pages
 
         public void OnGet()
         {
-            SelectedImageUrl = $"/img/meme{ImageSelected}.jpg";
+            MemeImageRepository memeImageRepo = new MemeImageRepository(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=MemeGenerator;Integrated Security=True;");
+
+            SelectedImageUrl = memeImageRepo.GetUrlFrom(ImageSelected);
+
+            MemeCreationRepository memeCreationRepository = new MemeCreationRepository(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=MemeGenerator;Integrated Security=True;");
+
+            MemeCreation memeCreation = new MemeCreation()
+            {
+                Color = Color,
+                MemeText = MemeText,
+                Position = Position,
+                Size = FontSize,
+                MemeImg = memeImageRepo.GetMemeImage(ImageSelected)
+            };
+
+            memeCreationRepository.Insert(memeCreation);
         }
     }
 }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.AspNet.Repetition", "S2.AspNet.Repetition\S2.AspNet.Repetition.csproj", "{D0C5BA0B-3399-4277-AE47-015CBFE057EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S2.AspNet.Repetition", "S2.AspNet.Repetition\S2.AspNet.Repetition.csproj", "{D0C5BA0B-3399-4277-AE47-015CBFE057EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.AspNet.Repetition.DAL", "S2.AspNet.Repetition.DAL\S2.AspNet.Repetition.DAL.csproj", "{11D2C454-96EE-4BF0-B2E2-05F670F28A67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.AspNet.Repetition.Entities", "S2.AspNet.Repetition.Entities\S2.AspNet.Repetition.Entities.csproj", "{6D1EB6D1-12B1-4BDF-9971-EC619BB300E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D0C5BA0B-3399-4277-AE47-015CBFE057EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C5BA0B-3399-4277-AE47-015CBFE057EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C5BA0B-3399-4277-AE47-015CBFE057EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D2C454-96EE-4BF0-B2E2-05F670F28A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D2C454-96EE-4BF0-B2E2-05F670F28A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D2C454-96EE-4BF0-B2E2-05F670F28A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D2C454-96EE-4BF0-B2E2-05F670F28A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1EB6D1-12B1-4BDF-9971-EC619BB300E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1EB6D1-12B1-4BDF-9971-EC619BB300E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1EB6D1-12B1-4BDF-9971-EC619BB300E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1EB6D1-12B1-4BDF-9971-EC619BB300E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
