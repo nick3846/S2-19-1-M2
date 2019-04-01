@@ -6,9 +6,14 @@ namespace S2.AspNet.Repetition.Entities
 {
     public class MemeCreation
     {
-        public MemeCreation() { }
-        public MemeCreation(MemeImage memeImg, DateTime creationDate, string memeText, string position, string color, string size)
+        public MemeCreation()
         {
+
+        }
+
+        public MemeCreation(int id, MemeImage memeImg, DateTime creationDate, string memeText, string position, string color, string size)
+        {
+            Id = id;
             MemeImg = memeImg;
             CreationDate = creationDate;
             MemeText = memeText;
@@ -17,6 +22,7 @@ namespace S2.AspNet.Repetition.Entities
             Size = size;
         }
 
+        public int Id { get; set; }
         public MemeImage MemeImg { get; set; }
         public DateTime CreationDate { get; set; }
         public string MemeText { get; set; }

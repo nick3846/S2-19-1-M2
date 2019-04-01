@@ -68,7 +68,27 @@ namespace S2.AspNet.Repetition.DAL
             }
             else
             {
-                throw new ArgumentException($"MemeIMage with id={imageSelected} was not found");
+                throw new ArgumentException($"MemeImage with id={imageSelected} was not found");
+            }
+        }
+        public MemeImage GetMostUsedImg()
+        {
+            string sql = $"SELECT TOP(1) COUNT(MemeImages.Id) as Occurences, Url, AltText FROM MemeImages JOIN MemeCreations ON MemeCreations.MemeImg = MemeImages.Id GROUP BY Url, AltText ORDER BY Occurences DESC";
+
+            DataTable memeImagesTable = ExecuteQuery(sql);
+
+            if (memeImagesTable.Rows.Count == 1)
+            {
+                int id = (int)memeImagesTable.Rows[0]["Occurences"];
+                string url = (string)memeImagesTable.Rows[0]["Url"];
+                string altText = (string)memeImagesTable.Rows[0]["AltText"];
+
+                MemeImage memeImage = new MemeImage(id, url, altText);
+                return memeImage;
+            }
+            else
+            {
+                throw new ArgumentException($"MemeImage was not found");
             }
         }
     }

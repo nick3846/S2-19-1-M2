@@ -1,11 +1,11 @@
 ﻿@page
-@model S2.AspNet.Repetition.Pages.RandomMemeModel
+@model S2.AspNet.Repetition.Pages.MostRecentMemeModel
 @{
-    ViewData["Title"] = "RandomMeme";
+    ViewData["Title"] = "MostRecentMeme";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h2>Random meme</h2>
+<h2>Seneste meme</h2>
 
 <div class="generatedMeme">
     <img src="@Model.MemeCreation.MemeImg.Url" />

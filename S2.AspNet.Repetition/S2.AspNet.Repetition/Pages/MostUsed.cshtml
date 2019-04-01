@@ -1,0 +1,15 @@
+﻿@page
+@model S2.AspNet.Repetition.Pages.MostUsedModel
+@{
+    ViewData["Title"] = "MostUsed";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Mest anvendte</h2>
+
+<div class="generatedMeme">
+    <img src="@Model.MostUsedImage.Url" alt="@Model.MostUsedImage.AltText"/>
+    <div class="@Model.MostUsedPosition.Position medium" style=" color: @Model.MostUsedColor.Color">
+        Farve/position
+    </div>
+</div>

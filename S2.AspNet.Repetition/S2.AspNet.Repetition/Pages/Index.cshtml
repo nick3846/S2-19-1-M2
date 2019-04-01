@@ -16,13 +16,13 @@
                 {
                     <div class="memeSelector">
                         <img src="@memeImage.Url" alt="@memeImage.AltText" />
-                        <input type="radio" name="imageSelected" value="@memeImage.Id" />
+                        <input type="radio" name="imageSelected" value="@memeImage.Id" required/>
                     </div>
                 }
             </div>
             <div class="memeSelector memeText">
-                <input type="text" size="50" name="memeText" placeholder="Skriv din meme text" /><br />
-                <input type="text" size="50" name="memeTitle" placeholder="Skriv din memes titel her" /><br />
+                <input type="text" size="50" name="memeText" placeholder="Skriv din meme text" required/><br />
+                <input type="text" size="50" name="memeTitle" placeholder="Skriv din memes titel her" required/><br />
                 <div>
                     <select name="position">
                         <option value="top-left">Top left</option>

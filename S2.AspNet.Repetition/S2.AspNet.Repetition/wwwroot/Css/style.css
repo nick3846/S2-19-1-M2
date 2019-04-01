@@ -131,6 +131,8 @@ section .generatedMeme img{
     section .generatedMeme >div.medium{font-size: 3rem}
     section .generatedMeme >div.big {font-size: 5rem}
 
+
+
     /* Bottom left text */
     section .generatedMeme .bottom-left {
         position: absolute;

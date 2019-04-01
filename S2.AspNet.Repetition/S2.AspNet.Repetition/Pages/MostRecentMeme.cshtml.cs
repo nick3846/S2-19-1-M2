@@ -9,14 +9,14 @@ using S2.AspNet.Repetition.Entities;
 
 namespace S2.AspNet.Repetition.Pages
 {
-    public class RandomMemeModel : PageModel
+    public class MostRecentMemeModel : PageModel
     {
         public MemeCreation MemeCreation { get; set; }
         public void OnGet()
         {
             MemeCreationRepository memeCreationRepo = new MemeCreationRepository(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=MemeGenerator;Integrated Security=True;");
 
-            MemeCreation = memeCreationRepo.GetRandomMeme();
+            MemeCreation = memeCreationRepo.GetMostRecentMeme();
         }
     }
 }
